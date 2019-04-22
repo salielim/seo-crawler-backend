@@ -33,8 +33,8 @@ const escapeHtml = require('escape-html');
  * @param {Object} res Cloud Function response context.
  *                     More info: https://expressjs.com/en/api.html#res
  */
-exports.helloGET = (req, res) => {
-  res.send('Hello World!');
+exports.crawl = (req, res) => {
+  res.send('crawl');
 };
 // [END functions_helloworld_get]
 
@@ -48,7 +48,7 @@ exports.helloGET = (req, res) => {
  *                     More info: https://expressjs.com/en/api.html#res
  */
 // [START functions_tips_terminate]
-exports.helloHttp = (req, res) => {
+exports.crawlHttp = (req, res) => {
   const name =
     req.query && req.query.name
       ? req.query.name
