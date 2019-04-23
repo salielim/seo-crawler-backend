@@ -10,6 +10,8 @@ exports.crawl = (req, res) => {
     var visitedURLs = [];
     var dataArr = [];
     const crawler = await HCCrawler.launch({
+      headless: true, 
+      args:['--no-sandbox'],
       // Function to be evaluated in browsers
       evaluatePage: () => ({
         url: $(location).attr('href'),
